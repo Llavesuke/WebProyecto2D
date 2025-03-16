@@ -74,7 +74,6 @@ El sitio ha sido desarrollado y probado para garantizar la compatibilidad con lo
 
 - **Chrome/Edge** (Motor Blink): Funcionalidad completa.
 - **Firefox** (Motor Gecko): Funcionalidad completa.
-- **Safari** (Motor WebKit): Funcionalidad completa con pequeñas diferencias en renderizado.
 
 ### Configuraciones Específicas
 
@@ -86,5 +85,17 @@ El sitio ha sido desarrollado y probado para garantizar la compatibilidad con lo
 Se han realizado pruebas exhaustivas en diferentes dispositivos y tamaños de pantalla:
 
 - **Dispositivos móviles**: Android e iOS en diferentes tamaños de pantalla.
-- **Tablets**: Tablets Android.
 - **Ordenadores de escritorio**: Diferentes resoluciones y relaciones de aspecto.
+
+En ordenadores, usando faro hemos obtenido las siguientes metricas:
+![](readmeImages/escritorioMetricas.png)
+
+Hemos obtenido un buen rendimiento, la accesibilidad es mejorable, buenas prácticas y un seo bastante bueno para no haber realizado nada.
+
+En dispositivos móviles, usando el lighthouse, hemos obtenido las siguientes metricas:
+![](readmeImages/movilMetricas.png)
+
+Aqui el rendimiento se ha reducido considerablemente asi que vamos a visualizar las posibles mejoras:
+
+![](readmeImages/mejorasMovil.png)
+
