@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Custom utility classes */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.3s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.6s forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B0000;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d0000;
+}
+
+/* Horror text effect */
+.horror-text-shadow {
+  text-shadow: 0 0 10px rgba(139, 0, 0, 0.7);
+}
+
+/* Custom hover effects */
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive image handling */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Blood drip effect for horror sections */
+.blood-drip {
+  position: relative;
+}
+
+.blood-drip::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-image: linear-gradient(to right, transparent 5%, #8B0000 5%, #8B0000 10%, transparent 10%, transparent 15%, #8B0000 15%, #8B0000 20%, transparent 20%, transparent 25%, #8B0000 25%, #8B0000 30%, transparent 30%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}

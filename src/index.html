@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Devil's Due - Horror Game</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-horror-black text-white font-main overflow-x-hidden">
+  <!-- Navigation -->
+  <header class="fixed w-full z-50 bg-horror-black/80 backdrop-blur-sm">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="w-40 md:w-48">
+        <img src="./assets/Logo-sin-fondo.png" alt="The Devil's Due Logo" class="w-full">
+      </div>
+      <div class="hidden md:flex space-x-8 text-lg">
+        <a href="#home" class="hover:text-horror-red transition-colors">Inicio</a>
+        <a href="#story" class="hover:text-horror-red transition-colors">Historia</a>
+        <a href="#gameplay" class="hover:text-horror-red transition-colors">Jugabilidad</a>
+        <a href="#gallery" class="hover:text-horror-red transition-colors">Galería</a>
+      </div>
+      <button class="md:hidden text-2xl" id="menu-toggle">
+        <span class="block w-6 h-0.5 bg-white mb-1.5"></span>
+        <span class="block w-6 h-0.5 bg-white mb-1.5"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-horror-black/95 backdrop-blur-sm w-full py-4 px-4">
+      <div class="flex flex-col space-y-4 text-center text-lg">
+        <a href="#home" class="hover:text-horror-red transition-colors py-2">Inicio</a>
+        <a href="#story" class="hover:text-horror-red transition-colors py-2">Historia</a>
+        <a href="#gameplay" class="hover:text-horror-red transition-colors py-2">Jugabilidad</a>
+        <a href="#gallery" class="hover:text-horror-red transition-colors py-2">Galería</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <picture>
+        <source srcset="./assets/Fondo_unido.png" media="(min-width: 768px)">
+        <img srcset="./assets/responsive/Fondo_unido_1920w.png 1920w, ./assets/responsive/Fondo_unido_1280w.png 1280w, ./assets/responsive/Fondo_unido_640w.png 640w"
+             sizes="100vw"
+             src="./assets/Fondo_unido.png"
+             alt="Horror Background"
+             class="w-full h-full object-cover opacity-60">
+      </picture>
+    </div>
+    <div class="absolute inset-0 bg-horror-black/80 z-5"></div>
+    <div class="container mx-auto px-4 z-10 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-horror text-horror-red mb-6 animate-fade-in">The Devil's Due</h1>
+        <p class="text-xl md:text-2xl mb-8 animate-fade-in-delay">Enfrenta tus miedos en esta terrorífica experiencia de horror 2D</p>
+        <a href="#trailer" class="inline-block bg-horror-red hover:bg-red-800 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 animate-fade-in-delay-2">
+          Ver Tráiler
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#story" class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section id="story" class="py-20 bg-horror-gray relative overflow-hidden">
+    <div class="absolute inset-0 bg-horror-black/70 z-0"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <h2 class="text-3xl md:text-5xl font-horror text-horror-red mb-12 text-center">La Historia</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <div class="w-full md:w-1/2 order-2 md:order-1">
+          <p class="text-lg md:text-xl mb-6 leading-relaxed opacity-0 transform translate-y-8 transition-all duration-700" data-animate="true">
+            Ethan Carter, consumido por la culpa y el insomnio, hereda la antigua y aislada casa de su abuela, ubicada en las afueras de un pueblo olvidado.
+          </p>
+          <p class="text-lg md:text-xl mb-6 leading-relaxed opacity-0 transform translate-y-8 transition-all duration-700 delay-100" data-animate="true">
+            Desesperado por el dinero de la venta para escapar de su pasado, Ethan llega a la casa sin ser consciente del terror que le espera.
+          </p>
+          <p class="text-lg md:text-xl mb-6 leading-relaxed opacity-0 transform translate-y-8 transition-all duration-700 delay-200" data-animate="true">
+            Desde la primera noche, fenómenos inexplicables perturban su estancia: sonidos extraños, sombras fugaces y un frío constante invaden la atmósfera.
+          </p>
+          <p class="text-lg md:text-xl leading-relaxed opacity-0 transform translate-y-8 transition-all duration-700 delay-300" data-animate="true">
+            Inicialmente, Ethan intenta racionalizar estos eventos, atribuyéndolos al estrés y a su imaginación. Pero eso no es así, ¿verdad?
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 order-1 md:order-2 mb-8 md:mb-0">
+          <div class="relative overflow-hidden rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-500">
+            <picture>
+              <source srcset="./assets/Recibidor_HD.jpeg" media="(min-width: 768px)">
+              <img srcset="./assets/responsive/Recibidor_HD_1200w.png 1200w, ./assets/responsive/Recibidor_HD_800w.png 800w, ./assets/responsive/Recibidor_HD_400w.png 400w"
+                   sizes="(min-width: 768px) 50vw, 100vw"
+                   src="./assets/Recibidor_HD.png"
+                   alt="Casa encantada interior"
+                   class="w-full h-auto rounded-lg">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trailer Section -->
+  <section id="trailer" class="py-20 bg-horror-black relative">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-5xl font-horror text-horror-red mb-12 text-center">Tráiler del Juego</h2>
+      <div class="max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+        <video controls class="w-full" poster="./assets/banner.png">
+          <source src="./assets/Trailer.webm" type="video/webm">
+          <source src="./assets/Trailer.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gameplay Section -->
+  <section id="gameplay" class="py-20 bg-horror-gray relative">
+    <div class="absolute inset-0 bg-horror-black/50 z-0"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <h2 class="text-3xl md:text-5xl font-horror text-horror-red mb-12 text-center">Características de Jugabilidad</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-horror-black/80 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="text-horror-red text-4xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Horror Atmosférico</h3>
+          <p class="text-gray-300">Sumérgete en una atmósfera escalofriante con entornos detallados y un diseño de sonido que te pondrá los pelos de punta.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-horror-black/80 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="text-horror-red text-4xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Resolución de Puzzles</h3>
+          <p class="text-gray-300">Resuelve intrincados puzzles para descubrir los oscuros secretos ocultos dentro de la casa de la abuela.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-horror-black/80 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="text-horror-red text-4xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Mecánicas de Sigilo</h3>
+          <p class="text-gray-300">Escóndete de las entidades sobrenaturales que acechan los pasillos, usando el sigilo y la estrategia para sobrevivir.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-horror-black/80 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="text-horror-red text-4xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0 0l-3-3m3 3l3-3" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Horror Psicológico</h3>
+          <p class="text-gray-300">Experimenta una narrativa que difumina la línea entre la realidad y la pesadilla, desafiando tu percepción.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="bg-horror-black/80 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="text-horror-red text-4xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Sonido Inmersivo</h3>
+          <p class="text-gray-300">Experimenta un aterrador audio 3D que reacciona a tus acciones y entorno, intensificando el horror.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="bg-horror-black/80 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="text-horror-red text-4xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Finales Múltiples</h3>
+          <p class="text-gray-300">Tus decisiones importan. Descubre diferentes finales basados en tus elecciones y acciones a lo largo del juego.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Character Section -->
+  <section id="character" class="py-20 bg-horror-black relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-5xl font-horror text-horror-red mb-12 text-center">Conoce al Personaje</h2>
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2 order-2 md:order-1">
+          <h3 class="text-2xl font-bold mb-4">Ethan Carter</h3>
+          <p class="text-lg mb-6 leading-relaxed">
+            Un hombre atormentado por su pasado, Ethan busca salvación financiera vendiendo la casa de su abuela. 
+            Poco sabe que la casa guarda oscuros secretos que pondrán a prueba su cordura y su voluntad de sobrevivir.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="w-24 text-horror-red font-bold">Fuerza:</div>
+              <div class="flex-1 bg-horror-gray h-4 rounded-full overflow-hidden">
+                <div class="bg-horror-red h-full rounded-full" style="width: 65%"></div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-24 text-horror-red font-bold">Agilidad:</div>
+              <div class="flex-1 bg-horror-gray h-4 rounded-full overflow-hidden">
+                <div class="bg-horror-red h-full rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-24 text-horror-red font-bold">Cordura:</div>
+              <div class="flex-1 bg-horror-gray h-4 rounded-full overflow-hidden">
+                <div class="bg-horror-red h-full rounded-full" style="width: 45%"></div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-24 text-horror-red font-bold">Percepción:</div>
+              <div class="flex-1 bg-horror-gray h-4 rounded-full overflow-hidden">
+                <div class="bg-horror-red h-full rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 order-1 md:order-2 mb-8 md:mb-0">
+          <div class="relative mx-auto max-w-sm md:max-w-md transform hover:scale-105 transition-all duration-500">
+            <picture>
+              <source srcset="./assets/Personaje_sin_fondo.png" media="(min-width: 768px)">
+              <img srcset="./assets/responsive/Personaje_sin_fondo_800w.png 800w, ./assets/responsive/Personaje_sin_fondo_500w.png 500w, ./assets/responsive/Personaje_sin_fondo_300w.png 300w"
+                   sizes="(min-width: 768px) 50vw, 80vw"
+                   src="./assets/Personaje_sin_fondo.png"
+                   alt="Ethan Carter Character"
+                   class="w-full h-auto mx-auto">
+            </picture>
+            <div class="absolute -inset-1 bg-horror-red/20 rounded-lg blur-lg -z-10 animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-20 bg-horror-gray relative">
+    <div class="absolute inset-0 bg-horror-black/60 z-0"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <h2 class="text-3xl md:text-5xl font-horror text-horror-red mb-12 text-center">Galería</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Gallery Item 1 -->
+        <div class="group relative overflow-hidden rounded-lg shadow-2xl cursor-pointer">
+          <picture>
+            <source srcset="./assets/Recibidor_HD.png" media="(min-width: 768px)">
+            <img srcset="./assets/responsive/Recibidor_HD_800w.png 800w, ./assets/responsive/Recibidor_HD_500w.png 500w, ./assets/responsive/Recibidor_HD_300w.png 300w"
+                 sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                 src="./assets/Recibidor_HD.jpeg"
+                 alt="Game Screenshot 1"
+                 class="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-horror-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <h3 class="text-xl font-bold text-white">El Vestíbulo</h3>
+            <p class="text-sm text-gray-300">Donde comienza tu pesadilla...</p>
+          </div>
+        </div>
+        <!-- Gallery Item 2 -->
+        <div class="group relative overflow-hidden rounded-lg shadow-2xl cursor-pointer">
+          <picture>
+            <source srcset="./assets/Fondo_unido.png" media="(min-width: 768px)">
+            <img srcset="./assets/responsive/Fondo_unido_800w.png 800w, ./assets/responsive/Fondo_unido_500w.png 500w, ./assets/responsive/Fondo_unido_300w.png 300w"
+                 sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                 src="./assets/Fondo_unido.png"
+                 alt="Game Screenshot 2"
+                 class="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-horror-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <h3 class="text-xl font-bold text-white">El Bosque Embrujado</h3>
+            <p class="text-sm text-gray-300">Rodeando la casa aislada...</p>
+          </div>
+        </div>
+        <!-- Gallery Item 3 -->
+        <div class="group relative overflow-hidden rounded-lg shadow-2xl cursor-pointer">
+          <picture>
+            <source srcset="./assets/banner.png" media="(min-width: 768px)">
+            <img srcset="./assets/responsive/banner_800w.png 800w, ./assets/responsive/banner_500w.png 500w, ./assets/responsive/banner_300w.png 300w"
+                 sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                 src="./assets/banner.png"
+                 alt="Game Screenshot 3"
+                 class="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-horror-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <h3 class="text-xl font-bold text-white">El sotano</h3>
+            <p class="text-sm text-gray-300">¿Que secretos hay ahí abajo?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-16 bg-horror-black relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl md:text-4xl font-horror text-horror-red mb-6">¡Informate!</h2>
+        <p class="text-lg mb-8">Suscribete a nuestro newsletter para las ultimas noticias de The Devil's Due.</p>
+        <form class="flex flex-col md:flex-row gap-4 justify-center">
+          <input type="email" placeholder="Your email address" class="px-4 py-3 bg-horror-gray border border-horror-red rounded-lg focus:outline-none focus:ring-2 focus:ring-horror-red text-white w-full md:w-auto md:flex-1">
+          <button type="submit" class="px-6 py-3 bg-horror-red hover:bg-red-800 text-white font-bold rounded-lg transition-colors w-full md:w-auto">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-horror-black border-t border-horror-red/30">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <img src="./assets/Logo-sin-fondo.png" alt="The Devil's Due Logo" class="h-16">
+        </div>
+        <div class="flex flex-col md:flex-row gap-8 text-center md:text-left">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Links</h3>
+            <ul class="space-y-2">
+              <li><a href="#home" class="hover:text-horror-red transition-colors">Inicio</a></li>
+              <li><a href="#story" class="hover:text-horror-red transition-colors">Historia</a></li>
+              <li><a href="#gameplay" class="hover:text-horror-red transition-colors">Jugabilidad</a></li>
+              <li><a href="#gallery" class="hover:text-horror-red transition-colors">Galería</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+            <div class="flex justify-center md:justify-start space-x-4">
+              <a href="#" class="text-white hover:text-horror-red transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" class="text-white hover:text-horror-red transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+              </a>
+              <a href="#" class="text-white hover:text-horror-red transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-sm text-gray-400">
+        <p>© 2023 The Devil's Due. All rights reserved. This is a fictional horror game website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Animate elements when they come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.target.hasAttribute('data-animate')) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('[data-animate="true"]').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
