@@ -29,7 +29,6 @@ Se ha utilizado JavaScript para añadir interactividad y efectos dinámicos:
 
 - **Intersection Observer API**: Implementada para detectar cuando los elementos entran en el viewport y activar animaciones.
 - **Manipulación del DOM**: Para controlar el menú móvil y otros elementos interactivos.
-- **Efectos de parallax**: Creación de efectos de profundidad en el desplazamiento.
 - **Galería interactiva**: Funcionalidad para interactuar con las imágenes de la galería.
 
 ### Frameworks y Librerías
